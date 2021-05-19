@@ -12,6 +12,7 @@ module.exports = {
     //     trackingId: "",
     //   },
     // },
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
@@ -60,6 +61,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-react-svg",
-    }
+    },
+    {
+      resolve: "gatsby-plugin-env-variables",
+      options: {
+        allowList: ["NEXT_PUBLIC_RUNTIME_ENV", "NEXT_PUBLIC_API_BASE_URL"]
+      },
+    },
   ],
 };
